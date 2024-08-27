@@ -1,7 +1,7 @@
 - name: Install nginx and start the service
   hosts: all
   become: yes
-  task:
+  tasks:
     - name: Install nginx
       ansible.builtin.dnf:
         name: nginx
