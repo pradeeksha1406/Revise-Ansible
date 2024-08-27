@@ -17,6 +17,11 @@
         path: /usr/share/nginx/html
         state: absent
 
+    - name: Creating the directory
+      ansible.builtin.file:
+        path: /usr/share/nginx/html
+        state: directory
+
     - name: download and extract the code
       ansible.builtin.unarchive:
         src: https://expense-artifacts.s3.amazonaws.com/frontend.zip
@@ -26,4 +31,5 @@
     - name: Start the nginx
       ansible.builtin.systemd:
         name: nginx
-        state: started
+        state: restarted
+        enabled: yes
