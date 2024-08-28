@@ -16,7 +16,7 @@
 
 
 
-    - name: role variable
+    - name: demo print variable
       hosts: localhost
       roles:
         -demo
