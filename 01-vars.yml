@@ -6,10 +6,10 @@
   tasks:
     - name: vars on play level
       ansible.builtin.debug:
-        msg: "{ URL }}"
+        msg: "{{ URL }}"
 
     - name: vars on task level
       ansible.builtin.debug:
         vars:
           URL: task.example.com
-        msg: "{ URL }}"
+        msg: "{{ URL }}"
