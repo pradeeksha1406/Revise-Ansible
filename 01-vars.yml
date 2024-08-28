@@ -1,0 +1,15 @@
+- name: Declare variables at play and task level
+  hosts: all
+  become: yes
+  vars:
+    URL: play.example.com
+  tasks:
+    - name: vars on play level
+      ansible.builtin.debug:
+        msg: "{ URL }}"
+
+    - name: vars on task level
+      ansible.builtin.debug:
+        vars:
+          URL: task.example.com
+        msg: "{ URL }}"
