@@ -10,6 +10,6 @@
 
     - name: vars on task level
       ansible.builtin.debug:
+        msg: "{{ URL }}"
         vars:
           URL: task.example.com
-        msg: "{{ URL }}"
