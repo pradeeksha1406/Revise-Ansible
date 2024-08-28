@@ -11,5 +11,5 @@
     - name: vars on task level
       ansible.builtin.debug:
         msg: "{{ URL }}"
-        vars:
+      vars:
           URL: task.example.com
