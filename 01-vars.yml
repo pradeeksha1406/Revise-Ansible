@@ -14,9 +14,11 @@
       vars:
           URL: task.example.com
 
-    - name: demo print variable
-      roles:
-        -demo
+- name: demo print variable
+  hosts: localhost
+    roles:
+      - demo
+
 
 
 
