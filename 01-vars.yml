@@ -1,18 +1,18 @@
-#- name: Declare variables at play and task level
-#  hosts: localhost
-#  become: yes
-#  vars:
-#    URL: play.example.com
-#  tasks:
-#    - name: vars on play level
-#      ansible.builtin.debug:
-#        msg: "{{ URL }}"
-#
-#    - name: vars on task level
-#      ansible.builtin.debug:
-#        msg: "{{ URL }}"
-#      vars:
-#          URL: task.example.com
+- name: Declare variables at play and task level
+  hosts: localhost
+  become: yes
+  vars:
+    URL: play.example.com
+  tasks:
+    - name: vars on play level
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+
+    - name: vars on task level
+      ansible.builtin.debug:
+        msg: "{{ URL }}"
+      vars:
+          URL: task.example.com
 
 
 
