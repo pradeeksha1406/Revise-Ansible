@@ -1,5 +1,5 @@
 - name: Declare variables at play and task level
-  hosts: all
+  hosts: localhost
   become: yes
   vars:
     URL: play.example.com
